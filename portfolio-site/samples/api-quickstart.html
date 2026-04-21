@@ -16,18 +16,31 @@
         <h1>API Quick Start</h1>
         <p class="sample-intro">This sample demonstrates how I structure a concise developer onboarding guide to help users achieve a first successful API request with minimal friction.</p>
 
+        <img class="sample-hero" src="../assets/project-api.svg" alt="Hero visual for the API Quick Start sample">
+
+        <div class="meta-grid">
+          <div class="meta-card"><strong>Audience</strong><span>Developers</span></div>
+          <div class="meta-card"><strong>Content type</strong><span>Quick start guide</span></div>
+          <div class="meta-card"><strong>Goal</strong><span>First successful request</span></div>
+          <div class="meta-card"><strong>Focus</strong><span>Speed and clarity</span></div>
+        </div>
+
         <section>
-          <h2>Project Context</h2>
+          <span class="section-label">Project Context</span>
+          <h2>Why this sample exists</h2>
           <p>For developer-facing products, the first-run experience matters a lot. A quick-start guide should not try to explain everything. Its job is to help users reach a successful first result quickly, build confidence, and then guide them toward more advanced documentation.</p>
+          <blockquote>Good quick-start content reduces hesitation. It gives users momentum before they encounter the full complexity of the product.</blockquote>
         </section>
 
         <section>
-          <h2>Documentation Goal</h2>
+          <span class="section-label">Documentation Goal</span>
+          <h2>Target outcome</h2>
           <p>Use the Fictional Text API to generate a short response in less than five minutes.</p>
         </section>
 
         <section>
-          <h2>Before You Begin</h2>
+          <span class="section-label">Setup</span>
+          <h2>Before you begin</h2>
           <ul>
             <li>Create an account in the Fictional Text console.</li>
             <li>Generate an API key from <strong>Settings &gt; API Keys</strong>.</li>
@@ -36,7 +49,8 @@
         </section>
 
         <section>
-          <h2>Make Your First Request</h2>
+          <span class="section-label">Core Flow</span>
+          <h2>Make your first request</h2>
           <p>Replace <code>YOUR_API_KEY</code> with your actual key.</p>
           <pre class="code-block">curl -X POST https://api.example.dev/v1/generate \
   -H "Authorization: Bearer YOUR_API_KEY" \
@@ -49,7 +63,7 @@
         </section>
 
         <section>
-          <h2>Example Response</h2>
+          <h2>Example response</h2>
           <pre class="code-block">{
   "id": "resp_12345",
   "model": "writer-lite",
@@ -62,22 +76,36 @@
         </section>
 
         <section>
-          <h2>Why This Structure Works</h2>
-          <ul>
-            <li>It defines a narrow goal that feels achievable.</li>
-            <li>It keeps prerequisites minimal and visible.</li>
-            <li>It shows a complete request and response pair.</li>
-            <li>It naturally points users toward next-step content instead of overloading them at the start.</li>
-          </ul>
+          <span class="section-label">Why it works</span>
+          <div class="two-col-notes">
+            <div class="note-box">
+              <h3>Design choices</h3>
+              <ul>
+                <li>Narrow, achievable goal</li>
+                <li>Minimal prerequisites</li>
+                <li>Complete request and response pair</li>
+                <li>Natural path to next-step content</li>
+              </ul>
+            </div>
+            <div class="note-box">
+              <h3>What this demonstrates</h3>
+              <ul>
+                <li>Audience awareness</li>
+                <li>Onboarding-oriented writing</li>
+                <li>Task-first structure</li>
+                <li>Developer empathy</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section>
-          <h2>Next Step Guidance</h2>
-          <ul>
-            <li>Review the authentication guide.</li>
-            <li>Try different models or prompts.</li>
-            <li>Move to the SDK integration guide for application-level usage.</li>
-          </ul>
+          <span class="section-label">Results</span>
+          <div class="result-grid">
+            <div class="result-box"><strong>Fast start</strong><span>Users can get to a working result quickly.</span></div>
+            <div class="result-box"><strong>Low friction</strong><span>The sample avoids overload and reduces confusion.</span></div>
+            <div class="result-box"><strong>Clear next step</strong><span>Users know where to go after first success.</span></div>
+          </div>
         </section>
       </article>
     </div>

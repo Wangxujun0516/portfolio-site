@@ -16,18 +16,30 @@
         <h1>SDK Integration Guide</h1>
         <p class="sample-intro">This sample shows how I write task-oriented integration documentation for developers who need clear sequencing, working code, and practical troubleshooting.</p>
 
+        <img class="sample-hero" src="../assets/project-sdk.svg" alt="Hero visual for the SDK Integration Guide sample">
+
+        <div class="meta-grid">
+          <div class="meta-card"><strong>Audience</strong><span>Application developers</span></div>
+          <div class="meta-card"><strong>Content type</strong><span>Integration guide</span></div>
+          <div class="meta-card"><strong>Goal</strong><span>Successful SDK setup</span></div>
+          <div class="meta-card"><strong>Focus</strong><span>Sequencing and troubleshooting</span></div>
+        </div>
+
         <section>
-          <h2>Project Context</h2>
+          <span class="section-label">Project Context</span>
+          <h2>Why this sample matters</h2>
           <p>SDK documentation should reduce uncertainty during implementation. Developers need to know what prerequisites matter, what order to follow, and what common issues might block them. This kind of guide is most effective when it is concrete, predictable, and easy to scan.</p>
         </section>
 
         <section>
-          <h2>Overview</h2>
+          <span class="section-label">Overview</span>
+          <h2>Task goal</h2>
           <p>In this guide, you install the Fictional Chat SDK, initialize the client, and send your first message.</p>
         </section>
 
         <section>
-          <h2>Prerequisites</h2>
+          <span class="section-label">Prerequisites</span>
+          <h2>Before implementation</h2>
           <ul>
             <li>Node.js 18 or later</li>
             <li>An API key from the developer console</li>
@@ -36,22 +48,19 @@
         </section>
 
         <section>
+          <span class="section-label">Implementation</span>
           <h2>Step 1. Install the SDK</h2>
           <pre class="code-block">npm install @fictional/chat-sdk</pre>
-        </section>
 
-        <section>
-          <h2>Step 2. Initialize the Client</h2>
+          <h2>Step 2. Initialize the client</h2>
           <pre class="code-block">import { ChatClient } from '@fictional/chat-sdk';
 
 const client = new ChatClient({
   apiKey: process.env.FICTIONAL_API_KEY,
   region: 'global'
 });</pre>
-        </section>
 
-        <section>
-          <h2>Step 3. Send a Message</h2>
+          <h2>Step 3. Send a message</h2>
           <pre class="code-block">const response = await client.messages.create({
   conversationId: 'demo-session',
   message: 'Hello, can you summarize this article?'
@@ -61,7 +70,8 @@ console.log(response.output);</pre>
         </section>
 
         <section>
-          <h2>Troubleshooting</h2>
+          <span class="section-label">Troubleshooting</span>
+          <h2>Common blockers</h2>
           <table class="table">
             <thead>
               <tr>
@@ -86,13 +96,12 @@ console.log(response.output);</pre>
         </section>
 
         <section>
-          <h2>What This Sample Demonstrates</h2>
-          <ul>
-            <li>Clear step sequencing</li>
-            <li>Practical code-first guidance</li>
-            <li>Support for common integration blockers</li>
-            <li>Writing aimed at task completion, not just feature explanation</li>
-          </ul>
+          <span class="section-label">Takeaways</span>
+          <div class="result-grid">
+            <div class="result-box"><strong>Task completion</strong><span>The user sees a complete path from install to output.</span></div>
+            <div class="result-box"><strong>Reduced ambiguity</strong><span>The guide clarifies order, assumptions, and expected results.</span></div>
+            <div class="result-box"><strong>Support-aware</strong><span>Troubleshooting lowers the chance of users getting blocked early.</span></div>
+          </div>
         </section>
       </article>
     </div>
