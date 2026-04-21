@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#F6F8FC"/>
+  <rect x="56" y="48" width="1488" height="804" rx="28" fill="#FFFFFF" stroke="#D8E3F0"/>
+  <rect x="96" y="96" width="620" height="34" rx="10" fill="#E0EAFF"/>
+  <rect x="96" y="174" width="312" height="556" rx="20" fill="#F8FBFF" stroke="#D8E3F0"/>
+  <rect x="438" y="174" width="1034" height="556" rx="20" fill="#FFFFFF" stroke="#D8E3F0"/>
+  <text x="116" y="122" fill="#2563EB" font-family="Arial, sans-serif" font-size="24" font-weight="700">Documentation Architecture Case Study</text>
+  <text x="124" y="220" fill="#0F172A" font-family="Arial, sans-serif" font-size="22" font-weight="700">Suggested navigation</text>
+  <text x="124" y="276" fill="#475569" font-family="Arial, sans-serif" font-size="20">Get Started</text>
+  <text x="124" y="320" fill="#475569" font-family="Arial, sans-serif" font-size="20">Guides</text>
+  <text x="124" y="364" fill="#475569" font-family="Arial, sans-serif" font-size="20">Concepts</text>
+  <text x="124" y="408" fill="#475569" font-family="Arial, sans-serif" font-size="20">API Reference</text>
+  <text x="124" y="452" fill="#475569" font-family="Arial, sans-serif" font-size="20">Troubleshooting</text>
+  <text x="124" y="496" fill="#475569" font-family="Arial, sans-serif" font-size="20">Release Notes</text>
+  <text x="466" y="220" fill="#0F172A" font-family="Arial, sans-serif" font-size="22" font-weight="700">Experience outcome</text>
+  <rect x="466" y="260" width="280" height="118" rx="18" fill="#F8FBFF" stroke="#D8E3F0"/>
+  <rect x="778" y="260" width="280" height="118" rx="18" fill="#F8FBFF" stroke="#D8E3F0"/>
+  <rect x="1090" y="260" width="280" height="118" rx="18" fill="#F8FBFF" stroke="#D8E3F0"/>
+  <text x="490" y="314" fill="#0F172A" font-family="Arial, sans-serif" font-size="20" font-weight="700">Faster onboarding</text>
+  <text x="490" y="344" fill="#475569" font-family="Arial, sans-serif" font-size="18">Users find their first path quickly</text>
+  <text x="802" y="314" fill="#0F172A" font-family="Arial, sans-serif" font-size="20" font-weight="700">Better retrieval</text>
+  <text x="802" y="344" fill="#475569" font-family="Arial, sans-serif" font-size="18">References and fixes are easier to find</text>
+  <text x="1114" y="314" fill="#0F172A" font-family="Arial, sans-serif" font-size="20" font-weight="700">Lower support load</text>
+  <text x="1114" y="344" fill="#475569" font-family="Arial, sans-serif" font-size="18">Structure reduces repeated confusion</text>
+  <text x="466" y="462" fill="#475569" font-family="Arial, sans-serif" font-size="20">This sample reflects documentation-system thinking, not only page-level writing.</text>
+</svg>

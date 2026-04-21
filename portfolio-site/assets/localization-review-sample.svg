@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#F8FBFF"/>
+  <rect x="56" y="48" width="1488" height="804" rx="28" fill="#FFFFFF" stroke="#D8E3F0"/>
+  <rect x="96" y="96" width="520" height="34" rx="10" fill="#DCFCE7"/>
+  <rect x="96" y="164" width="1376" height="588" rx="20" fill="#F8FBFF" stroke="#D8E3F0"/>
+  <line x1="556" y1="164" x2="556" y2="752" stroke="#D8E3F0" stroke-width="2"/>
+  <line x1="1010" y1="164" x2="1010" y2="752" stroke="#D8E3F0" stroke-width="2"/>
+  <text x="116" y="122" fill="#0F766E" font-family="Arial, sans-serif" font-size="24" font-weight="700">Localization and UI Copy Review</text>
+  <text x="124" y="214" fill="#64748B" font-family="Arial, sans-serif" font-size="18" font-weight="700">Original</text>
+  <text x="584" y="214" fill="#64748B" font-family="Arial, sans-serif" font-size="18" font-weight="700">Improved</text>
+  <text x="1038" y="214" fill="#64748B" font-family="Arial, sans-serif" font-size="18" font-weight="700">Rationale</text>
+  <text x="124" y="286" fill="#0F172A" font-family="Arial, sans-serif" font-size="20">Click here to do configuration</text>
+  <text x="584" y="286" fill="#0F172A" font-family="Arial, sans-serif" font-size="20">Configure settings</text>
+  <text x="1038" y="286" fill="#475569" font-family="Arial, sans-serif" font-size="20">Shorter, more natural, better for UI space</text>
+  <text x="124" y="376" fill="#0F172A" font-family="Arial, sans-serif" font-size="20">Please input your mail address</text>
+  <text x="584" y="376" fill="#0F172A" font-family="Arial, sans-serif" font-size="20">Enter your email address</text>
+  <text x="1038" y="376" fill="#475569" font-family="Arial, sans-serif" font-size="20">Standard terminology and verb choice</text>
+  <text x="124" y="466" fill="#0F172A" font-family="Arial, sans-serif" font-size="20">The task execute failed</text>
+  <text x="584" y="466" fill="#0F172A" font-family="Arial, sans-serif" font-size="20">Task execution failed</text>
+  <text x="1038" y="466" fill="#475569" font-family="Arial, sans-serif" font-size="20">Improves grammar and product tone</text>
+  <text x="124" y="608" fill="#0F172A" font-family="Arial, sans-serif" font-size="22" font-weight="700">What this demonstrates</text>
+  <text x="124" y="654" fill="#475569" font-family="Arial, sans-serif" font-size="20">Clearer English improves trust, reduces hesitation, and makes global products feel mature.</text>
+</svg>

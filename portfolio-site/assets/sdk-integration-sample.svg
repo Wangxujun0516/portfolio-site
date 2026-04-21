@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#F5F7FF"/>
+  <rect x="56" y="48" width="1488" height="804" rx="28" fill="#FFFFFF" stroke="#D8E3F0"/>
+  <rect x="96" y="96" width="490" height="34" rx="10" fill="#EEE7FF"/>
+  <rect x="96" y="160" width="660" height="500" rx="20" fill="#F8FBFF" stroke="#D8E3F0"/>
+  <rect x="784" y="160" width="688" height="242" rx="20" fill="#0F172A"/>
+  <rect x="784" y="430" width="688" height="230" rx="20" fill="#F8FBFF" stroke="#D8E3F0"/>
+  <text x="116" y="122" fill="#7C3AED" font-family="Arial, sans-serif" font-size="24" font-weight="700">SDK Integration Guide Sample</text>
+  <text x="124" y="212" fill="#0F172A" font-family="Arial, sans-serif" font-size="24" font-weight="700">Implementation flow</text>
+  <text x="124" y="266" fill="#475569" font-family="Arial, sans-serif" font-size="20">1. Install the package</text>
+  <text x="124" y="316" fill="#475569" font-family="Arial, sans-serif" font-size="20">2. Initialize the client</text>
+  <text x="124" y="366" fill="#475569" font-family="Arial, sans-serif" font-size="20">3. Send the first message</text>
+  <text x="124" y="432" fill="#0F172A" font-family="Arial, sans-serif" font-size="22" font-weight="700">Troubleshooting included</text>
+  <text x="124" y="474" fill="#475569" font-family="Arial, sans-serif" font-size="20">Common blockers are documented next to the happy path.</text>
+  <text x="812" y="216" fill="#93C5FD" font-family="Courier New, monospace" font-size="22">npm install @fictional/chat-sdk</text>
+  <text x="812" y="258" fill="#E2E8F0" font-family="Courier New, monospace" font-size="20">const client = new ChatClient({ apiKey, region: 'global' })</text>
+  <text x="812" y="300" fill="#E2E8F0" font-family="Courier New, monospace" font-size="20">await client.messages.create({ conversationId, message })</text>
+  <text x="812" y="470" fill="#0F172A" font-family="Arial, sans-serif" font-size="22" font-weight="700">Why this matters</text>
+  <text x="812" y="516" fill="#475569" font-family="Arial, sans-serif" font-size="20">Developers need ordered steps, code that feels runnable, and fast answers when setup fails.</text>
+  <text x="812" y="556" fill="#475569" font-family="Arial, sans-serif" font-size="20">This sample presents sequence, expectation, and support together.</text>
+</svg>
