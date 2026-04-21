@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API Quick Start Sample | Xujun Wang</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <main class="sample-page">
+    <div class="container">
+      <a class="back-link" href="../index.html">← Back to portfolio</a>
+      <article class="sample-content">
+        <p class="eyebrow">Writing Sample</p>
+        <h1>API Quick Start</h1>
+        <p class="sample-intro">This sample shows how I structure a concise onboarding guide for developers who want to make their first successful API request quickly.</p>
+
+        <section>
+          <h2>Goal</h2>
+          <p>Use the Fictional Text API to generate a short text response in less than five minutes.</p>
+        </section>
+
+        <section>
+          <h2>Before You Begin</h2>
+          <ul>
+            <li>Create an account in the Fictional Text console.</li>
+            <li>Generate an API key from <strong>Settings &gt; API Keys</strong>.</li>
+            <li>Install <code>curl</code> or use your preferred HTTP client.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Make Your First Request</h2>
+          <p>Replace <code>YOUR_API_KEY</code> with your actual key.</p>
+          <pre class="code-block">curl -X POST https://api.example.dev/v1/generate \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "writer-lite",
+    "prompt": "Write a welcome message for a new user.",
+    "max_tokens": 80
+  }'</pre>
+        </section>
+
+        <section>
+          <h2>Example Response</h2>
+          <pre class="code-block">{
+  "id": "resp_12345",
+  "model": "writer-lite",
+  "output": "Welcome! We are glad you're here. Let's get you started.",
+  "usage": {
+    "input_tokens": 9,
+    "output_tokens": 13
+  }
+}</pre>
+        </section>
+
+        <section>
+          <h2>What to Do Next</h2>
+          <ul>
+            <li>Review the authentication guide.</li>
+            <li>Try changing the model or prompt.</li>
+            <li>Move on to the SDK integration guide for application-level usage.</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

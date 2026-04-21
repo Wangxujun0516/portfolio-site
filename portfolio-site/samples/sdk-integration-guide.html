@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDK Integration Guide Sample | Xujun Wang</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <main class="sample-page">
+    <div class="container">
+      <a class="back-link" href="../index.html">← Back to portfolio</a>
+      <article class="sample-content">
+        <p class="eyebrow">Writing Sample</p>
+        <h1>SDK Integration Guide</h1>
+        <p class="sample-intro">This sample shows how I structure a task-oriented setup guide for developers integrating an SDK into a web application.</p>
+
+        <section>
+          <h2>Overview</h2>
+          <p>In this guide, you install the Fictional Chat SDK, initialize the client, and send your first message.</p>
+        </section>
+
+        <section>
+          <h2>Prerequisites</h2>
+          <ul>
+            <li>Node.js 18 or later</li>
+            <li>An API key from the developer console</li>
+            <li>A JavaScript or TypeScript project</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Step 1. Install the SDK</h2>
+          <pre class="code-block">npm install @fictional/chat-sdk</pre>
+        </section>
+
+        <section>
+          <h2>Step 2. Initialize the Client</h2>
+          <pre class="code-block">import { ChatClient } from '@fictional/chat-sdk';
+
+const client = new ChatClient({
+  apiKey: process.env.FICTIONAL_API_KEY,
+  region: 'global'
+});</pre>
+        </section>
+
+        <section>
+          <h2>Step 3. Send a Message</h2>
+          <pre class="code-block">const response = await client.messages.create({
+  conversationId: 'demo-session',
+  message: 'Hello, can you summarize this article?'
+});
+
+console.log(response.output);</pre>
+        </section>
+
+        <section>
+          <h2>Troubleshooting</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Issue</th>
+                <th>Possible Cause</th>
+                <th>Resolution</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>401 Unauthorized</td>
+                <td>Invalid or missing API key</td>
+                <td>Check that <code>FICTIONAL_API_KEY</code> is set correctly.</td>
+              </tr>
+              <tr>
+                <td>Connection timeout</td>
+                <td>Network restrictions or wrong region</td>
+                <td>Verify network access and confirm the configured region.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
