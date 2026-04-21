@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <main class="sample-page">
+  <main class="sample-page" data-reveal>
     <div class="container">
       <a class="back-link" href="../index.html">← Back to portfolio</a>
       <article class="sample-content article-content">
@@ -49,5 +49,24 @@
       </article>
     </div>
   </main>
+
+  <script>
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealTargets = document.querySelectorAll('[data-reveal]');
+
+  if (prefersReducedMotion) {
+    revealTargets.forEach((el) => el.classList.add('is-visible'));
+  } else {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealTargets.forEach((el) => revealObserver.observe(el));
+  }
+</script>
 </body>
 </html>
