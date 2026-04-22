@@ -57,6 +57,19 @@ a:hover {
   text-decoration: underline;
 }
 
+a:focus-visible,
+button:focus-visible,
+.button:focus-visible,
+.project-card:focus-visible,
+.blog-card:focus-visible,
+.back-link:focus-visible,
+nav a:focus-visible {
+  outline: 3px solid rgba(125, 211, 252, 0.95);
+  outline-offset: 3px;
+  border-radius: 14px;
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
 }
@@ -64,6 +77,23 @@ img {
 .container {
   width: min(var(--container), calc(100% - 32px));
   margin: 0 auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 16px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #082032;
+  font-weight: 700;
+  transition: top var(--transition);
+}
+
+.skip-link:focus {
+  top: 16px;
 }
 
 .max-reading,
@@ -265,10 +295,24 @@ table {
 .cta-actions,
 .stack-list,
 .hero-proof,
-.tag-list {
+.tag-list,
+.contact-shortcuts,
+.subpage-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.hero-support-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.hero-support-links a {
+  color: var(--color-text-soft);
+  font-weight: 600;
 }
 
 .hero-meta-note {
@@ -611,9 +655,71 @@ table {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 18px;
   color: var(--color-text-soft);
   font-weight: 600;
+}
+
+.subpage-shell {
+  display: grid;
+  gap: 22px;
+}
+
+.subpage-header,
+.subpage-footer,
+.subpage-cta {
+  padding: 24px 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.86));
+  box-shadow: var(--shadow-card);
+}
+
+.subpage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.subpage-header .brand {
+  font-size: 1rem;
+}
+
+.subpage-nav a {
+  color: var(--color-text-soft);
+  font-weight: 600;
+}
+
+.subpage-main {
+  display: grid;
+  gap: 18px;
+}
+
+.subpage-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.subpage-cta h2,
+.subpage-footer p {
+  margin-bottom: 0;
+}
+
+.contact-shortcuts a {
+  color: var(--color-text);
+}
+
+.subpage-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.subpage-footer p {
+  color: var(--color-text-soft);
 }
 
 .code-block {
@@ -738,6 +844,9 @@ table {
   .about-grid,
   .contact-grid,
   .resume-layout,
+  .subpage-header,
+  .subpage-cta,
+  .subpage-footer,
   .cta-panel,
   .contact-panel,
   .skill-dashboard,
@@ -790,7 +899,9 @@ table {
 
   .nav-shell,
   .section-heading-row,
-  .footer-row {
+  .footer-row,
+  .subpage-header,
+  .subpage-footer {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -806,6 +917,9 @@ table {
 
   .hero-panel,
   .content-panel,
+  .subpage-header,
+  .subpage-footer,
+  .subpage-cta,
   .resume-main,
   .resume-sidebar,
   .sample-content,
@@ -830,13 +944,19 @@ table {
   }
 
   .hero-actions,
-  .cta-actions {
+  .cta-actions,
+  .contact-shortcuts {
     flex-direction: column;
     align-items: stretch;
   }
 
   .button {
     width: 100%;
+  }
+
+  .hero-support-links {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .metrics-grid,

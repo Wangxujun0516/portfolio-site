@@ -5,18 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Documentation Architecture Case Study | Xujun Wang</title>
   <meta name="description" content="A documentation strategy case study by Xujun Wang showing how to improve navigation, discoverability, and user flow in a product docs center.">
+  <meta property="og:title" content="Documentation Architecture Case Study | Xujun Wang">
+  <meta property="og:description" content="A docs strategy case study showing how I approach navigation, discoverability, and user flow improvements.">
+  <meta property="og:image" content="https://portfolio-site-bho.pages.dev/assets/docs-architecture-sample.svg">
+  <meta property="og:url" content="https://portfolio-site-bho.pages.dev/samples/docs-architecture-case-study.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Documentation Architecture Case Study | Xujun Wang">
+  <meta name="twitter:description" content="A docs strategy case study showing how I approach navigation, discoverability, and user flow improvements.">
+  <meta name="twitter:image" content="https://portfolio-site-bho.pages.dev/assets/docs-architecture-sample.svg">
+  <link rel="canonical" href="https://portfolio-site-bho.pages.dev/samples/docs-architecture-case-study.html">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <main class="sample-page" data-reveal>
-    <div class="container">
-      <a class="back-link" href="../index.html">← Back to portfolio</a>
-      <article class="sample-content">
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  <main class="sample-page" data-reveal id="mainContent">
+    <div class="container subpage-shell">
+      <header class="subpage-header">
+        <a class="brand" href="../index.html" aria-label="Xujun Wang home page">Xujun Wang</a>
+        <nav class="subpage-nav" aria-label="Sample page">
+          <a href="../index.html#portfolio">Work Samples</a>
+          <a href="../index.html#insights">Writing</a>
+          <a href="../resume.html">Resume</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </header>
+
+      <div class="subpage-main">
+        <a class="back-link" href="../index.html">← Back to portfolio</a>
+        <article class="sample-content">
         <p class="eyebrow">Case Study</p>
         <h1>Documentation Architecture Improvement Case Study</h1>
         <p class="sample-intro">This sample shows how I approach documentation structure, user flow, and content discoverability when improving a product documentation center.</p>
 
-        <img class="sample-hero" src="../assets/docs-architecture-sample.svg" alt="Screenshot-style preview of the documentation architecture case study">
+        <img class="sample-hero" src="../assets/docs-architecture-sample.svg" alt="Screenshot-style preview of the documentation architecture case study" loading="lazy" decoding="async">
 
         <div class="meta-grid">
           <div class="meta-card"><strong>Audience</strong><span>Product and documentation teams</span></div>
@@ -87,7 +109,29 @@
           <h2>Why this matters for my profile</h2>
           <p>This case study reflects my interest in documentation systems, not just page-level writing. I care about how users move through documentation, where they get stuck, and how structure itself can improve product experience.</p>
         </section>
-      </article>
+        </article>
+      </div>
+
+      <section class="subpage-cta" aria-label="Sample contact call to action">
+        <div>
+          <p class="eyebrow">Work With Me</p>
+          <h2>Need a documentation structure that supports onboarding and findability?</h2>
+          <p>I can help redesign doc architecture, improve user flow, and connect guides, concepts, references, and troubleshooting into one clearer system.</p>
+        </div>
+        <div class="contact-shortcuts">
+          <a class="button primary" href="mailto:wangxujun0516@gmail.com">Email Me</a>
+          <a class="button" href="../resume.html">View Resume</a>
+        </div>
+      </section>
+
+      <footer class="subpage-footer">
+        <p>Xujun Wang · Technical Writer · Hangzhou, China</p>
+        <div class="subpage-nav" aria-label="Sample footer links">
+          <a href="mailto:wangxujun0516@gmail.com">Email</a>
+          <a href="../resume.html">Resume</a>
+          <a href="../index.html#portfolio">Portfolio</a>
+        </div>
+      </footer>
     </div>
   </main>
 

@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
   <header class="site-header" id="siteHeader">
     <div class="container nav-shell">
       <a class="brand" href="index.html" aria-label="Xujun Wang home page">Xujun Wang</a>
@@ -34,7 +35,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="mainContent">
     <section class="hero" data-reveal>
       <div class="container">
         <div class="hero-panel">
@@ -42,12 +43,14 @@
             <p class="eyebrow">Technical Writer • Documentation Specialist • Localization Professional</p>
             <h1>I design clearer product understanding for global software teams.</h1>
             <p class="lead">I’m Xujun Wang, a bilingual technical writer based in Hangzhou, China. I create developer documentation, API and SDK content, user guides, English UI review, and structured global product content for AI, cloud, and real-time communication products.</p>
-            <p class="lead">My value comes from combining technical documentation experience, strong English capability, international business context, and a practical sense of how users actually read, learn, and solve problems.</p>
+            <p class="lead">I combine documentation practice, strong English capability, and international business context to make complex products easier to understand and use.</p>
             <div class="hero-actions">
               <a class="button primary" href="resume.html">View Resume</a>
-              <a class="button" href="assets/xujun-wang-resume-en.pdf" download>Download PDF</a>
               <a class="button" href="#portfolio">Explore Portfolio</a>
-              <a class="button" href="#contact">Contact Me</a>
+            </div>
+            <div class="hero-support-links" aria-label="Secondary actions">
+              <a href="assets/xujun-wang-resume-en.pdf" download>Download PDF Resume</a>
+              <a href="mailto:wangxujun0516@gmail.com">Email Me Directly</a>
             </div>
             <p class="hero-meta-note">Response within 24 hours · Based in Hangzhou, UTC+8</p>
             <div class="hero-proof" aria-label="Key proof points">
@@ -61,7 +64,7 @@
           </div>
           <aside class="hero-visual">
             <div class="visual-card">
-              <img src="assets/headshot-user.png" alt="Professional portrait of Xujun Wang" class="headshot">
+              <img src="assets/headshot-user.png" alt="Professional portrait of Xujun Wang" class="headshot" decoding="async" fetchpriority="high">
               <div class="visual-caption">
                 <h2>Focused on clarity, usability, and global product communication</h2>
                 <p>I work best where product complexity meets user understanding.</p>
@@ -207,7 +210,7 @@
         </div>
         <div class="project-grid">
           <a class="project-card" href="samples/api-quickstart.html">
-            <img class="project-image" src="assets/api-quickstart-sample.svg" alt="Screenshot-style preview of a real API quick-start documentation sample">
+            <img class="project-image" src="assets/api-quickstart-sample.svg" alt="Screenshot-style preview of a real API quick-start documentation sample" loading="lazy" decoding="async">
             <div class="project-content">
               <span class="sample-type">Developer onboarding</span>
               <h3>API Quick Start</h3>
@@ -215,7 +218,7 @@
             </div>
           </a>
           <a class="project-card" href="samples/sdk-integration-guide.html">
-            <img class="project-image" src="assets/sdk-integration-sample.svg" alt="Screenshot-style preview of a real SDK integration guide sample">
+            <img class="project-image" src="assets/sdk-integration-sample.svg" alt="Screenshot-style preview of a real SDK integration guide sample" loading="lazy" decoding="async">
             <div class="project-content">
               <span class="sample-type">Implementation guide</span>
               <h3>SDK Integration Guide</h3>
@@ -223,7 +226,7 @@
             </div>
           </a>
           <a class="project-card" href="samples/localization-case-study.html">
-            <img class="project-image" src="assets/localization-review-sample.svg" alt="Screenshot-style preview of a localization and UI copy review sample">
+            <img class="project-image" src="assets/localization-review-sample.svg" alt="Screenshot-style preview of a localization and UI copy review sample" loading="lazy" decoding="async">
             <div class="project-content">
               <span class="sample-type">Localization case study</span>
               <h3>Localization and UI Copy Review</h3>
@@ -231,7 +234,7 @@
             </div>
           </a>
           <a class="project-card" href="samples/docs-architecture-case-study.html">
-            <img class="project-image" src="assets/docs-architecture-sample.svg" alt="Screenshot-style preview of a documentation architecture case study sample">
+            <img class="project-image" src="assets/docs-architecture-sample.svg" alt="Screenshot-style preview of a documentation architecture case study sample" loading="lazy" decoding="async">
             <div class="project-content">
               <span class="sample-type">Documentation strategy</span>
               <h3>Documentation Architecture Case Study</h3>

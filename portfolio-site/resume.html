@@ -4,15 +4,38 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Resume | Xujun Wang</title>
+  <meta name="description" content="Resume of Xujun Wang, a bilingual technical writer and documentation specialist focused on API docs, SDK guides, localization, and global product content.">
   <meta name="theme-color" content="#0F172A">
+  <meta property="og:title" content="Resume | Xujun Wang">
+  <meta property="og:description" content="Technical writer and documentation specialist with experience in AI, cloud, localization, and developer documentation.">
+  <meta property="og:image" content="https://portfolio-site-bho.pages.dev/assets/og-preview.png">
+  <meta property="og:url" content="https://portfolio-site-bho.pages.dev/resume.html">
+  <meta property="og:type" content="profile">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Resume | Xujun Wang">
+  <meta name="twitter:description" content="Technical writer and documentation specialist with experience in AI, cloud, localization, and developer documentation.">
+  <meta name="twitter:image" content="https://portfolio-site-bho.pages.dev/assets/og-preview.png">
+  <link rel="canonical" href="https://portfolio-site-bho.pages.dev/resume.html">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="resume-page" data-reveal>
-    <div class="container">
-      <a class="back-link" href="index.html">← Back to portfolio</a>
-      <div class="resume-layout">
-        <article class="resume-main">
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  <main class="resume-page" data-reveal id="mainContent">
+    <div class="container subpage-shell">
+      <header class="subpage-header">
+        <a class="brand" href="index.html" aria-label="Xujun Wang home page">Xujun Wang</a>
+        <nav class="subpage-nav" aria-label="Resume page">
+          <a href="index.html#portfolio">Work Samples</a>
+          <a href="index.html#insights">Writing</a>
+          <a href="resume.html" aria-current="page">Resume</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </header>
+
+      <div class="subpage-main">
+        <a class="back-link" href="index.html">← Back to portfolio</a>
+        <div class="resume-layout">
+          <article class="resume-main">
           <header>
             <p class="eyebrow">Resume</p>
             <h1>Xujun Wang</h1>
@@ -69,9 +92,9 @@
               </ul>
             </div>
           </section>
-        </article>
+          </article>
 
-        <aside class="resume-sidebar">
+          <aside class="resume-sidebar">
           <section>
             <h2>Core Skills</h2>
             <ul>
@@ -111,11 +134,53 @@
               <li>Global Content Specialist</li>
             </ul>
           </section>
-        </aside>
+          </aside>
+        </div>
       </div>
+
+      <section class="subpage-cta" aria-label="Resume contact call to action">
+        <div>
+          <p class="eyebrow">Next Step</p>
+          <h2>Interested in documentation, localization, or developer content support?</h2>
+          <p>I am available for remote technical writing, documentation engineering, localization, and global content roles.</p>
+        </div>
+        <div class="contact-shortcuts">
+          <a class="button primary" href="mailto:wangxujun0516@gmail.com">Email Me</a>
+          <a class="button" href="assets/xujun-wang-resume-en.pdf" download>Download PDF Resume</a>
+        </div>
+      </section>
+
+      <footer class="subpage-footer">
+        <p>Hangzhou, China · Available for remote opportunities worldwide</p>
+        <div class="subpage-nav" aria-label="Resume footer links">
+          <a href="mailto:wangxujun0516@gmail.com">Email</a>
+          <a href="index.html#portfolio">Portfolio</a>
+          <a href="https://github.com/Wangxujun0516/portfolio-site">GitHub</a>
+        </div>
+      </footer>
     </div>
   </main>
 
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Xujun Wang",
+      "jobTitle": "Technical Writer",
+      "description": "Bilingual technical writer and documentation specialist focused on API docs, SDK guides, localization, and global product content.",
+      "url": "https://portfolio-site-bho.pages.dev/resume.html",
+      "image": "https://portfolio-site-bho.pages.dev/assets/headshot-user.png",
+      "email": "mailto:wangxujun0516@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hangzhou",
+        "addressCountry": "CN"
+      },
+      "sameAs": [
+        "https://github.com/Wangxujun0516/portfolio-site"
+      ]
+    }
+  </script>
   <script>
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const revealTargets = document.querySelectorAll('[data-reveal]');
