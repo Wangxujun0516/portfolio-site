@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0F172A"/>
+  <circle cx="980" cy="120" r="220" fill="url(#g1)" fill-opacity="0.35"/>
+  <circle cx="180" cy="520" r="260" fill="url(#g2)" fill-opacity="0.22"/>
+  <rect x="72" y="72" width="1056" height="486" rx="32" fill="#111C34" stroke="#334155"/>
+  <text x="108" y="186" fill="#38BDF8" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="2">TECHNICAL WRITER • DOCUMENTATION SPECIALIST</text>
+  <text x="108" y="284" fill="white" font-family="Arial, sans-serif" font-size="68" font-weight="700">Xujun Wang</text>
+  <text x="108" y="356" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="34">I design clearer product understanding for global software teams.</text>
+  <text x="108" y="432" fill="#B6C2D1" font-family="Arial, sans-serif" font-size="26">API documentation • SDK guides • Localization • Remote opportunities</text>
+  <rect x="108" y="472" width="208" height="52" rx="26" fill="#38BDF8" fill-opacity="0.18" stroke="#38BDF8"/>
+  <text x="144" y="505" fill="#D6F3FF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Hangzhou, UTC+8</text>
+  <defs>
+    <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 120) rotate(90) scale(220)">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 520) rotate(90) scale(260)">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
