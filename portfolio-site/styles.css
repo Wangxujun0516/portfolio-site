@@ -271,6 +271,12 @@ table {
   gap: 12px;
 }
 
+.hero-meta-note {
+  margin: 14px 0 0;
+  color: var(--color-text-soft);
+  font-size: 0.94rem;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -400,7 +406,8 @@ table {
 .blog-grid,
 .meta-grid,
 .result-grid,
-.two-col-notes {
+.two-col-notes,
+.credibility-grid {
   display: grid;
   gap: 18px;
 }
@@ -449,8 +456,56 @@ table {
 
 .skill-dashboard,
 .skill-bars,
-.blog-grid {
+.blog-grid,
+.credibility-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.credibility-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.credential-card {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.92), rgba(15, 23, 42, 0.9));
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.credential-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-border-strong);
+}
+
+.credential-mark {
+  width: 84px;
+  height: 84px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, rgba(125, 211, 252, 0.95), rgba(14, 165, 233, 0.9));
+  color: #082032;
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  box-shadow: 0 18px 40px rgba(56, 189, 248, 0.22);
+}
+
+.availability-panel {
+  padding: 24px 28px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.availability-panel .eyebrow {
+  margin-bottom: 14px;
 }
 
 .project-grid {
@@ -692,7 +747,8 @@ table {
   .meta-grid,
   .result-grid,
   .two-col-notes,
-  .metrics-grid {
+  .metrics-grid,
+  .credibility-grid {
     grid-template-columns: 1fr;
   }
 
@@ -790,8 +846,13 @@ table {
   .blog-grid,
   .meta-grid,
   .result-grid,
-  .two-col-notes {
+  .two-col-notes,
+  .credibility-grid {
     grid-template-columns: 1fr;
+  }
+
+  .availability-panel {
+    padding: 22px;
   }
 
   .project-image {
