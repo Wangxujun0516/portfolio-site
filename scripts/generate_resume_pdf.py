@@ -8,11 +8,18 @@ TOP_Y = 790
 BOTTOM_Y = 54
 BODY_WIDTH = PAGE_WIDTH - (MARGIN_X * 2)
 
-OUTPUT_PATH = Path(r"d:\projects\portfolio-site\portfolio-site\assets\xujun-wang-resume-en.pdf")
+OUTPUT_PATH = Path("/home/wang/portfolio-site/portfolio-site/assets/xujun-wang-resume-en.pdf")
 
 
 def escape_pdf_text(text: str) -> str:
-    return text.replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)")
+    text = text.replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)")
+    # Replace characters that can't be encoded in latin-1
+    text = text.replace("\u2014", "--").replace("\u2013", "-")
+    text = text.replace("\u2018", "'").replace("\u2019", "'")
+    text = text.replace("\u201c", '"').replace("\u201d", '"')
+    text = text.replace("\u2026", "...")
+    text = text.replace("\u00a0", " ")
+    return text
 
 
 def text_capacity(font_size: float, width: float) -> int:
@@ -50,7 +57,7 @@ def build_resume_items():
     items.append({"text": "Xujun Wang", "font": "F2", "size": 22, "line_height": 28, "x": MARGIN_X, "gap_before": 0, "gap_after": 0})
     add_wrapped_lines(
         items,
-        "Hangzhou, China | wangxujun0516@gmail.com | Available for remote opportunities worldwide",
+        "Hangzhou, China | wangxujun0516@gmail.com | linkedin.com/in/xujun-wang-aab8b8264 | Available for remote opportunities worldwide",
         "F1",
         10.5,
         15,
@@ -64,21 +71,18 @@ def build_resume_items():
             [
                 (
                     "paragraph",
-                    "Bilingual technical documentation specialist and international business professional with 6+ years of experience delivering English and Chinese product documentation, API and SDK content, UI localization, and global-facing content for AI, cloud, and real-time communication products. Proven experience supporting developer ecosystems, improving documentation architecture, and collaborating with product and engineering teams in ByteDance, NetEase, and Alibaba Cloud related environments.",
+                    "International product operations and localization specialist with 6+ years driving global go-to-market content strategy across AI agent platforms (Coze by ByteDance), cloud infrastructure (Alibaba Cloud), and real-time communications (NetEase RTC). Proven track record of applying product operations thinking to multilingual content strategy, international user growth, and cross-cultural communication. TEM-8 and CATTI Level II certified. Foundational Spanish (A2).",
                 )
             ],
         ),
         (
-            "Core Skills",
+            "Core Competencies",
             [
-                ("bullet", "Technical documentation"),
-                ("bullet", "API and SDK documentation"),
-                ("bullet", "Developer guides and onboarding content"),
-                ("bullet", "Localization and UI copy review"),
-                ("bullet", "Documentation architecture"),
-                ("bullet", "Cross-functional collaboration"),
-                ("bullet", "SEO-aware global content"),
-                ("bullet", "International business communication"),
+                ("bullet", "International operations: multilingual content management, global market strategy"),
+                ("bullet", "User growth: landing page conversion +18% CTR, user satisfaction +6.3pp, overseas SEO"),
+                ("bullet", "Localization: EN-ZH translation (230+ docs), English UI review (800+ strings), console copy"),
+                ("bullet", "Product operations: AI content strategy (50+ API/SDK docs), agile release cycles"),
+                ("bullet", "Cross-cultural communication: Central Asia / Africa / South America market development"),
             ],
         ),
         (
@@ -86,43 +90,42 @@ def build_resume_items():
             [
                 (
                     "job",
-                    "Technical Documentation Engineer, CITIC Digital, on-site at ByteDance",
+                    "International Product Content Operations, CITIC Digital, on-site at ByteDance",
                     "Jan 2024 - Feb 2025",
                     [
-                        "Wrote and published 50+ English technical documents for the Coze AI agent development platform, including API and SDK materials for global developers.",
-                        "Produced 110+ Chinese and English feature documents and user guides aligned with product release cycles.",
-                        "Reviewed and optimized 800+ English UI strings to improve clarity and usability for international users.",
-                        "Worked closely with product and engineering teams to ensure timely and accurate content delivery.",
+                        "Built international content systems for the Coze AI agent development platform, authoring 50+ English API and SDK developer documents supporting global go-to-market strategy.",
+                        "Managed 110+ bilingual feature documents and user guides synchronized with weekly product release cycles for consistent international UX.",
+                        "Reviewed and optimized 800+ English UI strings across the platform, elevating international UX quality and brand consistency.",
+                        "Collaborated with PMs and engineering to drive a closed-loop content operations workflow from requirements intake to delivery.",
                     ],
                 ),
                 (
                     "job",
-                    "Technical Documentation Engineer, Shanghai Newtouch, on-site at NetEase",
+                    "International Content Operations, Shanghai Newtouch, on-site at NetEase",
                     "Jun 2021 - Dec 2023",
                     [
-                        "Managed full-lifecycle documentation for real-time audio and video products, including user manuals, API references, SDK docs, and best practices.",
-                        "Led documentation architecture optimization based on user journey analysis, increasing API documentation satisfaction to 84.3%.",
-                        "Optimized English content for overseas website product pages and console interfaces, contributing to an 18% improvement in click-through performance.",
+                        "Managed full-lifecycle multilingual content for real-time audio/video (RTC) products, including API references, SDK guides, and best practices.",
+                        "Led documentation architecture redesign based on user journey analysis, driving API documentation satisfaction from 78% to 84.3%.",
+                        "Optimized English copy for overseas product landing pages and cloud console interfaces, achieving an 18% improvement in click-through rates and directly contributing to international user growth.",
                     ],
                 ),
                 (
                     "job",
-                    "Technical Documentation Engineer, Fabu Information, on-site at Alibaba Cloud",
+                    "Product Localization Operations, Fabu Information, on-site at Alibaba Cloud",
                     "Mar 2020 - Jun 2021",
                     [
-                        "Localized 230+ English technical documents for networking and database products, including VPC and PolarDB.",
-                        "Improved English console copy for international users across cloud product interfaces.",
-                        "Supported globalization work by translating and optimizing international-facing product content.",
+                        "Localized 230+ English technical documents for Alibaba Cloud's international product suite (VPC, PolarDB, DingTalk), adapting content for global markets.",
+                        "Improved English console copy across multiple cloud product interfaces, enhancing international user experience.",
+                        "Supported DingTalk's globalization initiative by localizing UI strings and international-facing content.",
                     ],
                 ),
                 (
                     "job",
-                    "Business Specialist, Rural Electrification Research Institute, Ministry of Water Resources",
+                    "International Market Development Specialist, Ministry of Water Resources",
                     "Jun 2014 - Mar 2020",
                     [
-                        "Developed customers in Central Asia, Africa, and South America through trade shows, overseas training, and digital outreach.",
-                        "Prepared bidding documents for five domestic and international projects.",
-                        "Improved company website SEO, generating 100+ annual inquiries and indirectly supporting USD 180,000 in orders.",
+                        "Expanded markets across Central Asia, Africa, and South America through trade shows, overseas training, and digital outreach.",
+                        "Drove 100+ annual overseas inquiries and approximately $180K in attributed orders through SEO strategy and website localization.",
                     ],
                 ),
             ],
@@ -137,17 +140,18 @@ def build_resume_items():
         (
             "Certifications",
             [
-                ("bullet", "TEM-8"),
+                ("bullet", "TEM-8 (Test for English Majors, Band 8)"),
                 ("bullet", "CATTI Level II, English Translation"),
+                ("bullet", "Spanish — Beginner (A2)"),
             ],
         ),
         (
             "Target Roles",
             [
-                ("bullet", "Technical Writer"),
-                ("bullet", "Documentation Engineer"),
-                ("bullet", "Localization Specialist"),
-                ("bullet", "Global Content Specialist"),
+                ("bullet", "International Product Operations"),
+                ("bullet", "Product Localization Manager"),
+                ("bullet", "Global Content Operations"),
+                ("bullet", "International Market Development"),
             ],
         ),
     ]
