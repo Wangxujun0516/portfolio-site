@@ -51,15 +51,20 @@ Bilingual (EN/ZH) international operations and content professional with 10+ yea
 - Built and maintained English-language website with targeted SEO to attract overseas buyers in the renewable energy and water infrastructure sectors
 - Represented the institute at international trade exhibitions and conducted business negotiations in English
 
+### International Trade Specialist
+**Zhejiang Haidong Technology Co., Ltd.** · Mar 2025 – Present · Hangzhou
+
+- Managed full-cycle import operations for **Indonesian petroleum coke**, covering supplier sourcing, contract negotiation, customs clearance, and logistics — led a **200-ton order** through complete import lifecycle
+- Leveraged bilingual (EN/ZH) capabilities for cross-border supplier relationship management, coordinating business communication between Indonesian suppliers and Chinese clients
+- Established a complete SOP for cross-border bulk commodity trade: supplier sourcing → business negotiation → international logistics → customs clearance & delivery
+
 ### Earlier Career
 
 **English Translator & International Project Coordinator** · Geely Automobile Research Institute · 2011 – 2014
 - Translated 20+ R&D contracts and technical documents; provided interpretation for international IP negotiations and certification audits
 - Facilitated communication between Chinese engineering teams and international partners
 
-**Project Coordinator / Translator** · Sinohydro Bureau 12 · 2007 – 2011
-- Supported contract management and stakeholder communication for a major hydropower project in Vietnam (cross-border infrastructure project)
-- Coordinated between Chinese project teams, Vietnamese government agencies, and international consultants
+
 
 ## Key Achievements
 
