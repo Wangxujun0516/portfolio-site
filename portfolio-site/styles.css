@@ -903,6 +903,31 @@ table {
   color: var(--color-primary);
 }
 
+.footer-links,
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-links {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.social-link {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
 @media (max-width: 1024px) {
   .hero-panel,
   .about-grid,
