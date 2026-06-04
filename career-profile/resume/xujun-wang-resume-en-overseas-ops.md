@@ -19,8 +19,8 @@ Bilingual (EN/ZH) international operations and content professional with 10+ yea
 
 ## Professional Experience
 
-### Global Content Operations Specialist
-**CITIC Digital (on-site at ByteDance)** · Jan 2024 – Feb 2025 · Beijing
+### Content Operations Specialist
+**GienTech (on-site at ByteDance)** · Jan 2024 – Feb 2025 · Beijing
 
 - Led English content strategy for the **Coze AI agent development platform**, producing 50+ English technical guides and developer resources for a global audience
 - Managed cross-functional localization workflow, reviewing 800+ English UI strings to ensure consistent brand voice and international UX quality
