@@ -94,6 +94,23 @@
 
   .lang-grid { display: flex; gap: 24px; font-size: 10pt; margin-bottom: 4px; }
 
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .header-left { flex: 1; }
+  .header-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2563eb;
+    margin-left: 20px;
+    flex-shrink: 0;
+  }
+
   @media print {
     body { padding: 0; }
     .contact a { color: #2563eb; }
@@ -102,13 +119,18 @@
 </head>
 <body>
 
-<h1>Xujun Wang</h1>
-<div class="subhead">International Product Operations &amp; Global Growth Professional</div>
-<div class="contact">
-  <span>📍 Hangzhou, China</span>
-  <span>📧 <a href="mailto:wangxujun0516@gmail.com">wangxujun0516@gmail.com</a></span>
-  <span>🌐 <a href="https://wangxujun0516.github.io/portfolio-site/">wangxujun0516.github.io/portfolio-site</a></span>
-  <span>🔗 <a href="https://linkedin.com/in/xujunwang">linkedin.com/in/xujunwang</a></span>
+<div class="header">
+  <div class="header-left">
+    <h1>Xujun Wang</h1>
+    <div class="subhead">International Product Operations &amp; Global Growth Professional</div>
+    <div class="contact">
+      <span>📍 Hangzhou, China</span>
+      <span>📧 <a href="mailto:wangxujun0516@gmail.com">wangxujun0516@gmail.com</a></span>
+      <span>🌐 <a href="https://wangxujun0516.github.io/portfolio-site/">wangxujun0516.github.io/portfolio-site</a></span>
+      <span>🔗 <a href="https://linkedin.com/in/xujunwang">linkedin.com/in/xujunwang</a></span>
+    </div>
+  </div>
+  <img src="foto.jpg" alt="Xujun Wang" class="header-photo">
 </div>
 
 <h2>Professional Summary</h2>
