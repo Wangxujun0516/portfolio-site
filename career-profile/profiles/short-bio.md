@@ -1,3 +1,3 @@
-# Short Professional Bio
+Xujun Wang is a Hangzhou-based bilingual (EN/ZH) technical writer with 6+ years of experience in API/SDK documentation, developer guides, and localization for AI, cloud, and real-time communication products. He has written documentation for the Coze AI agent platform at ByteDance, RTC products at NetEase, and cloud infrastructure products at Alibaba Cloud. He holds TEM-8 and CATTI Level II certifications and is available for remote opportunities worldwide.
 
-Xujun Wang is a Hangzhou-based bilingual documentation and localization professional with experience supporting global-facing products in AI, cloud, and real-time communication. He has worked on technical documentation, API and SDK content, UI localization, and overseas content optimization in ByteDance, NetEase, and Alibaba Cloud related environments. With TEM-8 and CATTI Level II certification, he combines strong language skills with product understanding and international business experience.
+Portfolio: https://wangxujun0516.github.io/portfolio-site/

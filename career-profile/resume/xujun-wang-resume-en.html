@@ -1,116 +1,272 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Xujun Wang Resume</title>
-  <style>
-    body { font-family: Arial, Helvetica, sans-serif; color: #222; margin: 0; background: #f5f7fb; }
-    .page { max-width: 900px; margin: 32px auto; background: #fff; padding: 40px 52px; box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
-    h1 { font-size: 30px; margin: 0 0 6px; color: #0f172a; }
-    .meta { color: #475569; margin-bottom: 24px; line-height: 1.6; }
-    h2 { font-size: 18px; margin-top: 28px; margin-bottom: 10px; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
-    h3 { font-size: 16px; margin: 18px 0 4px; color: #111827; }
-    .date { color: #64748b; font-weight: normal; font-size: 14px; }
-    ul { margin-top: 8px; padding-left: 20px; }
-    li { margin-bottom: 8px; line-height: 1.5; }
-    p { line-height: 1.6; margin: 8px 0; }
-    .skills { columns: 2; column-gap: 32px; }
-    @media print {
-      body { background: #fff; }
-      .page { box-shadow: none; margin: 0; max-width: none; padding: 24px 28px; }
-      a { color: inherit; text-decoration: none; }
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Xujun Wang - International Product Operations & Growth</title>
+<style>
+  @page { margin: 0.5in 0.6in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: #1a1a1a;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.4in 0.5in;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .header-left { flex: 1; }
+  h1 {
+    font-size: 20pt;
+    font-weight: 700;
+    color: #0a192f;
+    margin-bottom: 1px;
+  }
+  .subhead {
+    font-size: 11pt;
+    color: #2563eb;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .contact-line {
+    font-size: 9.5pt;
+    color: #4a5568;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 16px;
+  }
+  .contact-line a { color: #2563eb; text-decoration: none; }
+  .header-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2563eb;
+    margin-left: 20px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #0a192f;
+    border-bottom: 1.5px solid #2563eb;
+    padding-bottom: 1px;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .summary {
+    font-size: 10pt;
+    color: #2d3748;
+    margin-bottom: 8px;
+    text-align: justify;
+  }
+
+  .skills-block {
+    margin-bottom: 4px;
+  }
+  .skills-cat {
+    font-weight: 700;
+    color: #0a192f;
+    font-size: 9.5pt;
+  }
+  .skills-text {
+    font-size: 9.5pt;
+    color: #2d3748;
+    margin-bottom: 3px;
+  }
+
+  .exp-item { margin-bottom: 11px; }
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .exp-title {
+    font-weight: 700;
+    font-size: 10.5pt;
+    color: #0a192f;
+  }
+  .exp-company {
+    font-weight: 600;
+    font-size: 10pt;
+    color: #2563eb;
+  }
+  .exp-date {
+    font-size: 9pt;
+    color: #718096;
+    white-space: nowrap;
+  }
+  .exp-bullets {
+    margin-top: 2px;
+    padding-left: 14px;
+  }
+  .exp-bullets li {
+    font-size: 9.5pt;
+    margin-bottom: 2px;
+    color: #2d3748;
+    text-align: justify;
+  }
+  .exp-achievement {
+    font-size: 9.5pt;
+    color: #4a5568;
+    margin: 2px 0 0 14px;
+    font-style: italic;
+  }
+
+  .edu-item { font-size: 9.5pt; margin-bottom: 2px; }
+  .edu-item .name { font-weight: 600; }
+
+  .cert-item { font-size: 9.5pt; margin-bottom: 1px; }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px 16px;
+  }
+
+  @media print {
+    body { padding: 0; }
+  }
+</style>
 </head>
 <body>
-  <div class="page">
+
+<div class="header">
+  <div class="header-left">
     <h1>Xujun Wang</h1>
-    <div class="meta">Hangzhou, China | 15384006618 | 5523405@qq.com</div>
-
-    <h2>Professional Summary</h2>
-    <p>Bilingual technical documentation specialist and international business professional with 6+ years of experience delivering English and Chinese product documentation, API and SDK content, UI localization, and global-facing product content for AI, cloud, and real-time communication products. Proven experience supporting developer ecosystems, improving documentation architecture, and collaborating with product and engineering teams in ByteDance, NetEase, and Alibaba Cloud related environments. TEM-8 and CATTI Level II certified.</p>
-
-    <h2>Core Competencies</h2>
-    <ul class="skills">
-      <li>Technical documentation</li>
-      <li>API and SDK documentation</li>
-      <li>Developer guides and user manuals</li>
-      <li>English and Chinese localization</li>
-      <li>UI copy review and optimization</li>
-      <li>Documentation architecture and standards</li>
-      <li>Cross-functional collaboration</li>
-      <li>SEO-oriented content optimization</li>
-      <li>International business communication</li>
-    </ul>
-
-    <h2>Professional Experience</h2>
-
-    <h3>Technical Documentation Engineer, CITIC Digital, on-site at ByteDance <span class="date">Jan 2024 - Feb 2025</span></h3>
-    <ul>
-      <li>Wrote and published 50+ English technical documents for the Coze AI agent development platform, including API and SDK materials for global developers.</li>
-      <li>Produced 110+ Chinese and English feature documents and user guides for ByteDance cloud products, aligned with release cycles.</li>
-      <li>Reviewed and optimized 800+ English UI strings to improve clarity and usability for international users.</li>
-      <li>Worked closely with product and engineering teams to ensure timely and accurate delivery.</li>
-    </ul>
-
-    <h3>Technical Documentation Engineer, Shanghai Newtouch, on-site at NetEase <span class="date">Jun 2021 - Dec 2023</span></h3>
-    <ul>
-      <li>Managed full-lifecycle Chinese and English documentation for real-time audio and video products, including user manuals, API references, SDK docs, and best practices.</li>
-      <li>Led documentation architecture optimization based on user journey analysis, increasing API documentation satisfaction to 84.3%.</li>
-      <li>Optimized English content for overseas website product pages and console interfaces, contributing to an 18% improvement in click-through performance.</li>
-    </ul>
-
-    <h3>Technical Documentation Engineer, Fabu Information, on-site at Alibaba Cloud <span class="date">Mar 2020 - Jun 2021</span></h3>
-    <ul>
-      <li>Localized 230+ English documents for Alibaba Cloud networking and database products, including VPC and PolarDB.</li>
-      <li>Improved English console copy for international users across cloud product interfaces.</li>
-      <li>Supported globalization by translating English content and UI strings for DingTalk applications.</li>
-    </ul>
-
-    <h3>Business Specialist, Rural Electrification Research Institute, Ministry of Water Resources <span class="date">Jun 2014 - Mar 2020</span></h3>
-    <ul>
-      <li>Developed customers across Central Asia, Africa, and South America through trade shows, overseas training, and social media marketing.</li>
-      <li>Prepared bidding documents for five domestic and international projects.</li>
-      <li>Improved company website SEO, generating 100+ annual inquiries and indirectly supporting USD 180,000 in orders.</li>
-    </ul>
-
-    <h3>English Translator, Geely Automobile Research Institute <span class="date">Jun 2011 - May 2014</span></h3>
-    <ul>
-      <li>Translated and reviewed 20+ R&D contracts and technical documents for international cooperation projects.</li>
-      <li>Provided interpretation support for project negotiations, IP reviews, and certifications.</li>
-    </ul>
-
-    <h3>English Translator, Sinohydro Bureau 12 Co., Ltd. <span class="date">Oct 2007 - May 2011</span></h3>
-    <ul>
-      <li>Supported contract negotiation, execution tracking, payment applications, and claims for a major hydraulic infrastructure project in Vietnam.</li>
-      <li>Coordinated communication among project owners, engineers, and stakeholders.</li>
-    </ul>
-
-    <h3>High School English Teacher, Houren High School, Lanxi, Zhejiang <span class="date">Aug 2003 - Sep 2007</span></h3>
-    <ul>
-      <li>Taught high school English and designed tailored teaching approaches to improve student outcomes.</li>
-    </ul>
-
-    <h2>Selected Project</h2>
-    <h3>NetEase Yunxin Overseas Market Growth Support <span class="date">Jun 2021 - Present</span></h3>
-    <ul>
-      <li>Optimized overseas landing pages and product detail pages to improve product value communication.</li>
-      <li>Localized content for different target markets and improved SEO through keyword and page structure optimization.</li>
-      <li>Increased core keyword click-through rates by 10% and supported international traffic growth.</li>
-    </ul>
-
-    <h2>Education</h2>
-    <ul>
-      <li>Bachelor's Degree in English, Zhejiang Normal University</li>
-      <li>Bachelor's Degree in Electrical Engineering and Automation, Zhejiang University of Distance Education</li>
-    </ul>
-
-    <h2>Certifications</h2>
-    <ul>
-      <li>TEM-8</li>
-      <li>CATTI Level II, English Translation</li>
-    </ul>
+    <div class="subhead">International Product Operations &amp; Growth</div>
+    <div class="contact-line">
+      <span>📍 Hangzhou, China</span>
+      <span>📧 wangxujun0516@gmail.com</span>
+      <span>🌐 wangxujun0516.github.io/portfolio-site</span>
+      <span>🔗 linkedin.com/in/xujunwang</span>
+    </div>
   </div>
+  <img src="foto.jpg" alt="Xujun Wang" class="header-photo">
+</div>
+
+<div class="section-title">Professional Summary</div>
+<p class="summary">
+Results-driven International Operations and Growth professional with 10+ years scaling AI, SaaS, Cloud, and B2B platforms across global markets. Proven track record leading cross-functional localization frameworks, content operations, and SEO-driven growth strategies at Tier-1 tech ecosystems including ByteDance, NetEase, and Alibaba Cloud. Combined expertise in B2B international trade (200-ton cross-border import lifecycle), bilingual content strategy, and data-driven SEO optimization — delivering 100+ annual inquiries and ~$180K in attributed orders. TEM-8 and CATTI Level II certified.
+</p>
+
+<div class="section-title">Core Competencies</div>
+
+<div class="skills-block">
+  <span class="skills-cat">Product Operations &amp; GTM:</span>
+  <span class="skills-text">Cross-functional product launches, agile product lifecycles, user journey mapping, feature rollout coordination, cross-border SOP development</span>
+</div>
+<div class="skills-block">
+  <span class="skills-cat">Growth Marketing &amp; SEO:</span>
+  <span class="skills-text">Technical SEO strategy, keyword research, content-driven lead generation, Google Analytics, conversion rate optimization (CRO), A/B testing, landing page optimization</span>
+</div>
+<div class="skills-block">
+  <span class="skills-cat">Localization &amp; Content Operations:</span>
+  <span class="skills-text">UI/UX copy optimization, technical writing &amp; developer guides, documentation management, globalization strategy, linguistic QA, EN↔ZH translation</span>
+</div>
+<div class="skills-block">
+  <span class="skills-cat">International Trade &amp; Business:</span>
+  <span class="skills-text">B2B client acquisition, vendor relationship management, contract negotiation, cross-border logistics, customs clearance lifecycle, international trade exhibitions</span>
+</div>
+
+<div class="section-title">Professional Experience</div>
+
+<div class="exp-item">
+  <div class="exp-header">
+    <span><span class="exp-title">International Trade Specialist</span> · <span class="exp-company">Zhejiang Haidong Technology Co., Ltd.</span></span>
+    <span class="exp-date">Mar 2025 – Present</span>
+  </div>
+  <ul class="exp-bullets">
+    <li>Managed full-cycle import operations for <strong>Indonesian petroleum coke</strong>, covering supplier sourcing, contract negotiation, customs clearance, and logistics — led a <strong>200-ton bulk order</strong> through complete import lifecycle</li>
+    <li>Leveraged bilingual (EN/ZH) capabilities for cross-border supplier relationship management, coordinating business communication between Indonesian suppliers and Chinese clients</li>
+    <li>Built transferable skills in international operations: overseas supplier management, cross-border contract review, international logistics coordination</li>
+  </ul>
+  <div class="exp-achievement"><strong>Achievement:</strong> Drove end-to-end cross-border import operations for a 200-ton bulk commodity, establishing a complete SOP from supplier sourcing → business negotiation → international logistics → customs clearance & delivery.</div>
+</div>
+
+<div class="exp-item">
+  <div class="exp-header">
+    <span><span class="exp-title">Content Operations Specialist – Coze AI Platform</span> · <span class="exp-company">ByteDance (via GienTech Contract)</span></span>
+    <span class="exp-date">Jan 2024 – Feb 2025</span>
+  </div>
+  <ul class="exp-bullets">
+    <li>Spearheaded English content operations and technical documentation strategy for the Coze AI agent development platform, authoring <strong>50+ English developer guides</strong> to scale global user adoption</li>
+    <li>Managed the localization pipeline by reviewing <strong>800+ English UI strings</strong>, establishing product voice consistency and maintaining high international UX quality standards</li>
+    <li>Partnered directly with cross-functional Product Managers and Engineering teams across global time zones to sync documentation releases with weekly agile sprint cycles</li>
+  </ul>
+</div>
+
+<div class="exp-item">
+  <div class="exp-header">
+    <span><span class="exp-title">International Content &amp; Product Communication Specialist</span> · <span class="exp-company">NetEase (via Shanghai Newtouch Contract)</span></span>
+    <span class="exp-date">Jun 2021 – Dec 2023</span>
+  </div>
+  <ul class="exp-bullets">
+    <li>Engineered technical SEO and English content optimization for international landing pages and cloud consoles, driving an <strong>18% lift in click-through rates (CTR)</strong></li>
+    <li>Restructured localized content architectures based on quantitative user journey analysis, increasing global user satisfaction scores from 78% to <strong>84.3%</strong></li>
+    <li>Formulated comprehensive bilingual content frameworks for Real-Time Communication (RTC) SaaS products deployed across APAC and Western enterprise markets</li>
+  </ul>
+</div>
+
+<div class="exp-item">
+  <div class="exp-header">
+    <span><span class="exp-title">Localization &amp; International Growth Specialist</span> · <span class="exp-company">Alibaba Cloud (via Fabu Information Contract)</span></span>
+    <span class="exp-date">Mar 2020 – Jun 2021</span>
+  </div>
+  <ul class="exp-bullets">
+    <li>Directly localized and updated <strong>230+ technical documentation assets</strong> for flagship global cloud products including Virtual Private Cloud (VPC), PolarDB, and DingTalk</li>
+    <li>Optimized end-to-end English UI copy workflows across multiple SaaS platforms, minimizing onboarding friction for international enterprise customers</li>
+    <li>Supported cloud globalization strategy by executing cross-border QA reviews on localized interfaces ahead of global product rollouts</li>
+  </ul>
+</div>
+
+<div class="exp-item">
+  <div class="exp-header">
+    <span><span class="exp-title">International Business Development Specialist</span> · <span class="exp-company">Ministry of Water Resources – International Division</span></span>
+    <span class="exp-date">2014 – 2020</span>
+  </div>
+  <ul class="exp-bullets">
+    <li>Drove B2B international market acquisition across <strong>Central Asia, Africa, and South America</strong>, converting cold leads into active enterprise partnerships</li>
+    <li>Generated <strong>100+ annual high-intent global inquiries and secured ~$180K in attributed sales orders</strong> by designing and executing an organic website SEO content strategy</li>
+    <li>Built, launched, and maintained the organization's English-language web portal from the ground up, utilizing target keyword mapping to capture global renewable energy leads</li>
+    <li>Represented the institute at global trade exhibitions, leading cross-border commercial negotiations directly in English</li>
+  </ul>
+</div>
+
+<div class="exp-item">
+  <div class="exp-header">
+    <span><span class="exp-title">English Translator &amp; International Project Coordinator</span> · <span class="exp-company">Geely Automobile Research Institute</span></span>
+    <span class="exp-date">2011 – 2014</span>
+  </div>
+  <ul class="exp-bullets">
+    <li>Translated <strong>20+ complex engineering R&D contracts</strong>, technical specification documents, and compliance materials protecting corporate intellectual property (IP)</li>
+    <li>Provided consecutive interpretation for international IP negotiations, technical alignment meetings, and global vehicle certification audits</li>
+  </ul>
+</div>
+
+<div class="section-title">Education &amp; Certifications</div>
+
+<div class="grid-2">
+  <div>
+    <div class="edu-item"><span class="name">B.A. in English</span> — Zhejiang Normal University</div>
+    <div class="edu-item"><span class="name">B.S. in Electrical Engineering &amp; Automation</span> — Zhejiang University</div>
+  </div>
+  <div>
+    <div class="cert-item"><strong>TEM-8</strong> — Test for English Majors, Band 8 (Highest professional tier in China)</div>
+    <div class="cert-item"><strong>CATTI Level II</strong> — English Translation (China Accreditation Test for Translators and Interpreters)</div>
+  </div>
+</div>
+
 </body>
 </html>
