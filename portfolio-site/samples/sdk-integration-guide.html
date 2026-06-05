@@ -95,6 +95,48 @@ const client = new ChatClient({
 });
 
 console.log(response.output);</pre>
+
+          <h2>Step 4. Handle streaming responses (advanced)</h2>
+          <pre class="code-block">import { ChatClient, StreamEvent } from '@fictional/chat-sdk';
+
+const client = new ChatClient({
+  apiKey: process.env.FICTIONAL_API_KEY,
+  region: 'global'
+});
+
+const stream = await client.messages.stream({
+  conversationId: 'demo-session',
+  message: 'Explain machine learning in simple terms.',
+  stream: true
+});
+
+for await (const event of stream) {
+  if (event.type === StreamEvent.TEXT_CHUNK) {
+    process.stdout.write(event.data);
+  } else if (event.type === StreamEvent.DONE) {
+    console.log('\n\nComplete!');
+    console.log('Total tokens:', event.usage.total_tokens);
+  }
+}</pre>
+
+          <h2>Step 5. Error handling (complete example)</h2>
+          <pre class="code-block">try {
+  const response = await client.messages.create({
+    conversationId: 'demo-session',
+    message: 'Hello world'
+  });
+  console.log('Success:', response.output);
+} catch (error) {
+  if (error.status === 401) {
+    console.error('Authentication failed: Check your API key');
+  } else if (error.status === 429) {
+    console.error('Rate limit exceeded: Try again later');
+  } else if (error.status === 500) {
+    console.error('Server error: Our team has been notified');
+  } else {
+    console.error('Unexpected error:', error.message);
+  }
+}</pre>
         </section>
 
         <section>
@@ -119,8 +161,70 @@ console.log(response.output);</pre>
                 <td>Network restrictions or wrong region</td>
                 <td>Verify network access and confirm the configured region.</td>
               </tr>
+              <tr>
+                <td>Module not found</td>
+                <td>SDK not installed or wrong import path</td>
+                <td>Run <code>npm install @fictional/chat-sdk</code> and verify imports.</td>
+              </tr>
+              <tr>
+                <td>429 Too Many Requests</td>
+                <td>Rate limit exceeded</td>
+                <td>Implement exponential backoff and retry after the Retry-After header.</td>
+              </tr>
+              <tr>
+                <td>TypeError: client is undefined</td>
+                <td>Initialization failed</td>
+                <td>Ensure the client is initialized before calling methods on it.</td>
+              </tr>
             </tbody>
           </table>
+        </section>
+
+        <section>
+          <span class="section-label">Best Practices</span>
+          <h2>Production-ready patterns</h2>
+          
+          <h3>1. Centralized client configuration</h3>
+          <pre class="code-block">// lib/chat-client.js
+import { ChatClient } from '@fictional/chat-sdk';
+
+let client = null;
+
+export function getChatClient() {
+  if (!client) {
+    client = new ChatClient({
+      apiKey: process.env.FICTIONAL_API_KEY,
+      region: 'global',
+      timeout: 30000
+    });
+  }
+  return client;
+}</pre>
+
+          <h3>2. Safe conversation management</h3>
+          <pre class="code-block">export async function sendMessageWithRetry(
+  conversationId,
+  message,
+  maxRetries = 3
+) {
+  const client = getChatClient();
+  let attempt = 0;
+  
+  while (attempt < maxRetries) {
+    try {
+      return await client.messages.create({
+        conversationId,
+        message
+      });
+    } catch (error) {
+      attempt++;
+      if (attempt === maxRetries || error.status < 500) {
+        throw error;
+      }
+      await new Promise(r => setTimeout(r, 1000 * attempt));
+    }
+  }
+}</pre>
         </section>
 
         <section>

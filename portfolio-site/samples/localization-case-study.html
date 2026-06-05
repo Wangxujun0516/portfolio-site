@@ -125,6 +125,198 @@
         </section>
 
         <section>
+          <span class="section-label">Deep Dive Examples</span>
+          <h2>More comprehensive UI improvements</h2>
+          
+          <h3>Example 1: Button labels and confirmation dialogs</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Original</th>
+                <th>Improved</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Primary action</td>
+                <td>Submit the thing</td>
+                <td>Save changes</td>
+              </tr>
+              <tr>
+                <td>Dangerous action</td>
+                <td>Delete it now</td>
+                <td>Delete project</td>
+              </tr>
+              <tr>
+                <td>Confirmation title</td>
+                <td>Are you sure?</td>
+                <td>Delete project "Marketing Dashboard"?</td>
+              </tr>
+              <tr>
+                <td>Confirmation body</td>
+                <td>This cannot be undone. Think again.</td>
+                <td>This action cannot be undone. All associated data will be permanently deleted.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Example 2: Error messages that help users recover</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Original</th>
+                <th>Improved</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Something went wrong</td>
+                <td>We encountered an unexpected error. Please try again or contact support if the problem persists.</td>
+              </tr>
+              <tr>
+                <td>Wrong format</td>
+                <td>Please enter a valid email address (e.g., name@example.com)</td>
+              </tr>
+              <tr>
+                <td>Too big file</td>
+                <td>File size exceeds 50MB limit. Please compress the file or choose a smaller one.</td>
+              </tr>
+              <tr>
+                <td>Permission denied</td>
+                <td>You don't have permission to edit this resource. Contact your workspace admin to request access.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Example 3: Empty states and onboarding</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Section</th>
+                <th>Original</th>
+                <th>Improved</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Empty dashboard</td>
+                <td>No projects yet</td>
+                <td>No projects yet. Create your first project to get started.</td>
+              </tr>
+              <tr>
+                <td>Empty list</td>
+                <td>Nothing here</td>
+                <td>No team members added yet. Invite your team to collaborate.</td>
+              </tr>
+              <tr>
+                <td>Welcome tooltip</td>
+                <td>Hi! Welcome to our app!</td>
+                <td>Welcome! Here are three ways to get started with your workspace.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <span class="section-label">Terminology System</span>
+          <h2>Consistent language across the product</h2>
+          
+          <h3>Sample terminology entry</h3>
+          <div class="note-box">
+            <p><strong>Term:</strong> Workspace</p>
+            <p><strong>Definition:</strong> The top-level container for projects, team members, and billing</p>
+            <p><strong>Usage rules:</strong></p>
+            <ul>
+              <li>Always capitalize when referring to the product feature: "Your Workspace"</li>
+              <li>Never abbreviate</li>
+              <li>Use consistently across UI, docs, and marketing</li>
+            </ul>
+            <p><strong>Never use:</strong> Account, Organization, Team (unless specifically referring to people)</p>
+          </div>
+
+          <h3>Terminology consistency table</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Use this</th>
+                <th>Not this</th>
+                <th>Because</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sign in</td>
+                <td>Log in, Login</td>
+                <td>More natural for enterprise products; aligns with industry standards</td>
+              </tr>
+              <tr>
+                <td>Delete</td>
+                <td>Remove, Erase</td>
+                <td>Consistent terminology for irreversible actions</td>
+              </tr>
+              <tr>
+                <td>Settings</td>
+                <td>Preferences, Options, Configuration</td>
+                <td>Standard term for product customization</td>
+              </tr>
+              <tr>
+                <td>Save</td>
+                <td>Submit, Apply, Confirm</td>
+                <td>Familiar action with clear user expectation</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <span class="section-label">Review Checklist</span>
+          <h2>What I verify in UI English reviews</h2>
+          
+          <div class="two-col-notes">
+            <div class="note-box">
+              <h3>Grammar & Clarity</h3>
+              <ul>
+                <li>Consistent verb tense and mood</li>
+                <li>Proper article usage (a/an/the)</li>
+                <li>Parallel structure in lists</li>
+                <li>Clear subject-verb agreement</li>
+              </ul>
+            </div>
+            <div class="note-box">
+              <h3>Tone & Voice</h3>
+              <ul>
+                <li>Helpful, not punitive</li>
+                <li>Confident, not arrogant</li>
+                <li>Clear, not ambiguous</li>
+                <li>Consistent with brand guidelines</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="two-col-notes">
+            <div class="note-box">
+              <h3>International Readiness</h3>
+              <ul>
+                <li>Avoid idioms and cultural references</li>
+                <li>Use simple sentence structures</li>
+                <li>Keep strings short where possible</li>
+                <li>Allow for text expansion in translation</li>
+              </ul>
+            </div>
+            <div class="note-box">
+              <h3>Accessibility</h3>
+              <ul>
+                <li>Clear alt text for images</li>
+                <li>Descriptive link text</li>
+                <li>Meaningful error states</li>
+                <li>Screen-reader friendly phrasing</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
           <span class="section-label">Expected Impact</span>
           <div class="result-grid">
             <div class="result-box"><strong>Higher trust</strong><span>Cleaner English helps the product feel more polished.</span></div>
