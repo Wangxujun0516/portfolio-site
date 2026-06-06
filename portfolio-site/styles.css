@@ -240,6 +240,39 @@ main {
   background: currentColor;
 }
 
+/* Sample page typography */
+.sample-content h1 {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.sample-content h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  line-height: 1.3;
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
+.sample-content h3 {
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  line-height: 1.4;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.sample-content .sample-intro {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin-bottom: 28px;
+  max-width: 65ch;
+}
+
+.sample-content .sample-hero {
+  margin-bottom: 28px;
+}
+
 h1,
 h2,
 h3,
@@ -651,7 +684,7 @@ table {
   display: block;
   width: 100%;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 16px;
   border: 1px solid rgba(148, 163, 184, 0.16);
   background: rgba(255, 255, 255, 0.04);
 }
