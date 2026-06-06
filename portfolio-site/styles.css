@@ -788,14 +788,14 @@ table {
 
 .code-block {
   overflow: auto;
-  padding: 18px;
-  border-radius: var(--radius-md);
+  padding: 16px;
+  border-radius: 16px;
   background: rgba(2, 8, 23, 0.86);
   border: 1px solid rgba(148, 163, 184, 0.12);
   color: #e2e8f0;
   font-family: 'SFMono-Regular', Consolas, Monaco, monospace;
-  font-size: 0.92rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .table {
@@ -808,7 +808,7 @@ table {
 
 .table th,
 .table td {
-  padding: 14px;
+  padding: 12px;
   text-align: left;
   vertical-align: top;
   border: 1px solid rgba(148, 163, 184, 0.12);
